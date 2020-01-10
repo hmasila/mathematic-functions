@@ -49,9 +49,6 @@
           "400" : {
             "description" : "Bad Request"
           },
-          "403" : {
-            "description" : "Forbiden"
-          }
         }
       }
     }
