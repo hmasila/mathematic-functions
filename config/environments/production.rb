@@ -53,7 +53,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "arithmet_production"
 
-  config.action_mailer.perform_caching = false
+  # config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -64,7 +64,7 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
-  config.active_support.deprecation = :notify
+  # config.active_support.deprecation = :notify
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
