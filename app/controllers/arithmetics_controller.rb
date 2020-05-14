@@ -9,6 +9,7 @@ class ArithmeticsController < ApplicationController
 		render json: {"message": 'Use the format: {"input": [num, num]}'}, status: 400
 	end
 
+	# Returns the middle number in a sorted, ascending or descending, list of numbers
 	def median
 	  sorted = @input.sort
 	  len = sorted.length

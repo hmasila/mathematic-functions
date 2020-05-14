@@ -45,7 +45,11 @@
             }
           },
           "400" : {
-            "description" : "Bad Request"
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': [num, num]}"}
+            }
           }
         }
       }
@@ -82,7 +86,11 @@
             }
           },
           "400" : {
-            "description" : "Bad Request"
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': [num, num]}"}
+            }
           }
         }
       }
@@ -90,7 +98,7 @@
     "/mode" : {
       "post" : {
         "summary": "Mode",
-        "description" : "Calculates the mode of numbers",
+        "description" : "Returns the value that occurs most often. If no number in the list is repeated, then it returns the first number.",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
@@ -119,7 +127,11 @@
             }
           },
           "400" : {
-            "description" : "Bad Request"
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': [num, num]}"}
+            }
           }
         }
       }
@@ -127,7 +139,7 @@
     "/median" : {
       "post" : {
         "summary": "Median",
-        "description" : "Calculates the median of numbers",
+        "description" : "Returns the middle number in the array",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
@@ -156,7 +168,52 @@
             }
           },
           "400" : {
-            "description" : "Bad Request"
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': [num, num]}"}
+            }
+          }
+        }
+      }
+    },
+    "/range" : {
+      "post" : {
+        "summary": "Range",
+        "description" : "Returns the difference between the largest and smallest values.",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "array",
+          "description" : "An array of numbers from which a range will be calculated",
+          "schema" : {
+            "type": "object",
+            "properties" : {
+              "numbers" : {
+                "type" : "array",
+                "items": {
+                  "type": "integer"
+                },
+                "example": [1, 2, 3]
+              }
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful",
+            "schema" : {
+              "type": "integer",
+              "example": 2
+            }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': [num, num]}"}
+            }
           }
         }
       }
