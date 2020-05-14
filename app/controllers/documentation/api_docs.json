@@ -217,6 +217,85 @@
           }
         }
       }
+    },
+    "/factorial" : {
+      "post" : {
+        "summary": "Factorial",
+        "description" : "Returns the factorial of a number.",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "integer",
+          "description" : "A number in which a factorial will be calculated",
+          "schema" : {
+            "type": "object",
+            "properties" : {
+              "numbers" : {
+                "type" : "integer",
+                "example": 5
+              }
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful",
+            "schema" : {
+              "type": "integer",
+              "example": 120
+            }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': num}"}
+            }
+          }
+        }
+      }
+    },
+    "/power" : {
+      "post" : {
+        "summary": "Power",
+        "description" : "Returns X to the power N.",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "array",
+          "description" : "A number and the power it will be raised to",
+          "schema" : {
+            "type": "object",
+            "properties" : {
+              "numbers" : {
+                "type" : "array",
+                "items": {
+                  "type": "integer"
+                },
+                "example": [5, 3]
+              }
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful",
+            "schema" : {
+              "type": "integer",
+              "example": 125
+            }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type": "object",
+              "example": {"message": "Use the format: {'input': [num, power]}"}
+            }
+          }
+        }
+      }
     }
   }
 }
