@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "This is the API documentation",
+    "description" : "Calculate different mathematical functions",
     "version" : "1.0.0",
     "title" : "Arithmetic API Documentation",
     "license" : {
@@ -15,10 +15,8 @@
   "paths" : {
     "/mean" : {
       "post" : {
-         "tags": [
-          "mean"
-        ],
-        "summary" : "Calculates the mean of numbers",
+        "summary": "Mean",
+        "description" : "Calculates the mean of numbers",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
@@ -44,6 +42,117 @@
             "schema" : {
               "type": "integer",
               "example": 2
+            }
+          },
+          "400" : {
+            "description" : "Bad Request"
+          }
+        }
+      }
+    },
+    "/average" : {
+      "post" : {
+        "summary": "Average",
+        "description" : "Calculates the average of numbers",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "array",
+          "description" : "An array of numbers from which an average will be calculated",
+          "schema" : {
+            "type": "object",
+            "properties" : {
+              "numbers" : {
+                "type" : "array",
+                "items": {
+                  "type": "integer"
+                },
+                "example": [1, 2, 3]
+              }
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful",
+            "schema" : {
+              "type": "integer",
+              "example": 2
+            }
+          },
+          "400" : {
+            "description" : "Bad Request"
+          }
+        }
+      }
+    },
+    "/mode" : {
+      "post" : {
+        "summary": "Mode",
+        "description" : "Calculates the mode of numbers",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "array",
+          "description" : "An array of numbers from which a mode will be calculated",
+          "schema" : {
+            "type": "object",
+            "properties" : {
+              "numbers" : {
+                "type" : "array",
+                "items": {
+                  "type": "integer"
+                },
+                "example": [1, 2, 3, 2]
+              }
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful",
+            "schema" : {
+              "type": "integer",
+              "example": 2
+            }
+          },
+          "400" : {
+            "description" : "Bad Request"
+          }
+        }
+      }
+    },
+    "/median" : {
+      "post" : {
+        "summary": "Median",
+        "description" : "Calculates the median of numbers",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "array",
+          "description" : "An array of numbers from which a median will be calculated",
+          "schema" : {
+            "type": "object",
+            "properties" : {
+              "numbers" : {
+                "type" : "array",
+                "items": {
+                  "type": "integer"
+                },
+                "example": [1, 2, 3]
+              }
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful",
+            "schema" : {
+              "type": "integer",
+              "example": 2.0
             }
           },
           "400" : {
