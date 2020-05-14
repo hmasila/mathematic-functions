@@ -10,12 +10,12 @@
     }
   },
   "host" : "arithmet.herokuapp.com",
-  "basePath": "/api",
+  "basePath" : "/api",
   "schemes" : [ "https" ],
   "paths" : {
     "/mean" : {
       "post" : {
-        "summary": "Mean",
+        "summary" : "Mean",
         "description" : "Calculates the mean of numbers",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -24,14 +24,14 @@
           "name" : "array",
           "description" : "An array of numbers from which a mean will be calculated",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "array",
-                "items": {
-                  "type": "integer"
+                "items" : {
+                  "type" : "integer"
                 },
-                "example": [1, 2, 3]
+                "example" : [1, 2, 3]
               }
             }
           }
@@ -40,15 +40,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 2
+              "type" : "integer",
+              "example" : 2
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': [num, num]}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': [num, num]}"}
             }
           }
         }
@@ -56,7 +56,7 @@
     },
     "/average" : {
       "post" : {
-        "summary": "Average",
+        "summary" : "Average",
         "description" : "Calculates the average of numbers",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -65,14 +65,14 @@
           "name" : "array",
           "description" : "An array of numbers from which an average will be calculated",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "array",
-                "items": {
-                  "type": "integer"
+                "items" : {
+                  "type" : "integer"
                 },
-                "example": [1, 2, 3]
+                "example" : [1, 2, 3]
               }
             }
           }
@@ -81,15 +81,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 2
+              "type" : "integer",
+              "example" : 2
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': [num, num]}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': [num, num]}"}
             }
           }
         }
@@ -97,7 +97,7 @@
     },
     "/mode" : {
       "post" : {
-        "summary": "Mode",
+        "summary" : "Mode",
         "description" : "Returns the value that occurs most often. If no number in the list is repeated, then it returns the first number.",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -106,14 +106,14 @@
           "name" : "array",
           "description" : "An array of numbers from which a mode will be calculated",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "array",
-                "items": {
-                  "type": "integer"
+                "items" : {
+                  "type" : "integer"
                 },
-                "example": [1, 2, 3, 2]
+                "example" : [1, 2, 3, 2]
               }
             }
           }
@@ -122,15 +122,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 2
+              "type" : "integer",
+              "example" : 2
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': [num, num]}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': [num, num]}"}
             }
           }
         }
@@ -138,7 +138,7 @@
     },
     "/median" : {
       "post" : {
-        "summary": "Median",
+        "summary" : "Median",
         "description" : "Returns the middle number in the array",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -147,14 +147,14 @@
           "name" : "array",
           "description" : "An array of numbers from which a median will be calculated",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "array",
-                "items": {
-                  "type": "integer"
+                "items" : {
+                  "type" : "integer"
                 },
-                "example": [1, 2, 3]
+                "example" : [1, 2, 3]
               }
             }
           }
@@ -163,15 +163,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 2.0
+              "type" : "integer",
+              "example" : 2.0
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': [num, num]}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': [num, num]}"}
             }
           }
         }
@@ -179,7 +179,7 @@
     },
     "/range" : {
       "post" : {
-        "summary": "Range",
+        "summary" : "Range",
         "description" : "Returns the difference between the largest and smallest values.",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -188,14 +188,14 @@
           "name" : "array",
           "description" : "An array of numbers from which a range will be calculated",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "array",
-                "items": {
-                  "type": "integer"
+                "items" : {
+                  "type" : "integer"
                 },
-                "example": [1, 2, 3]
+                "example" : [1, 2, 3]
               }
             }
           }
@@ -204,15 +204,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 2
+              "type" : "integer",
+              "example" : 2
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': [num, num]}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': [num, num]}"}
             }
           }
         }
@@ -220,7 +220,7 @@
     },
     "/factorial" : {
       "post" : {
-        "summary": "Factorial",
+        "summary" : "Factorial",
         "description" : "Returns the factorial of a number.",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -229,11 +229,11 @@
           "name" : "integer",
           "description" : "A number in which a factorial will be calculated",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "integer",
-                "example": 5
+                "example" : 5
               }
             }
           }
@@ -242,15 +242,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 120
+              "type" : "integer",
+              "example" : 120
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': num}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': num}"}
             }
           }
         }
@@ -258,7 +258,7 @@
     },
     "/power" : {
       "post" : {
-        "summary": "Power",
+        "summary" : "Power",
         "description" : "Returns X to the power N.",
         "consumes" : [ "application/json" ],
         "produces" : [ "application/json" ],
@@ -267,14 +267,14 @@
           "name" : "array",
           "description" : "A number and the power it will be raised to",
           "schema" : {
-            "type": "object",
+            "type" : "object",
             "properties" : {
-              "numbers" : {
+              "input" : {
                 "type" : "array",
-                "items": {
-                  "type": "integer"
+                "items" : {
+                  "type" : "integer"
                 },
-                "example": [5, 3]
+                "example" : [5, 3]
               }
             }
           }
@@ -283,15 +283,15 @@
           "200" : {
             "description" : "Successful",
             "schema" : {
-              "type": "integer",
-              "example": 125
+              "type" : "integer",
+              "example" : 125
             }
           },
           "400" : {
             "description" : "Bad Request",
             "schema" : {
-              "type": "object",
-              "example": {"message": "Use the format: {'input': [num, power]}"}
+              "type" : "object",
+              "example" : {"message" : "Use the format: {'input': [num, power]}"}
             }
           }
         }
