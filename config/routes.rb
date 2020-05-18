@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   post '/cosh', to: 'arithmetics#cosh'
   post '/asin', to: 'arithmetics#asin'
   post '/median', to: 'arithmetics#median'
-  post '/mean', to: 'arithmetics#mean'
+  post '/mean', to: 'arithmetics#average'
   post '/mode', to: 'arithmetics#mode'
   post '/range', to: 'arithmetics#range'
 
